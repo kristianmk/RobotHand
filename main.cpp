@@ -176,7 +176,7 @@ public:
     virtual ~QRoboticsRobotHand()
     {
         // Here we should probably close the port only if this is the last hand using this serial port. Now it will close it
-        // without caring of other users.
+        // without caring about other users.
         const bool successClosing = communicationHandler_->closeSerialPort(serialPortInfo_.serial_port) == 0;
 
         if(successClosing)
