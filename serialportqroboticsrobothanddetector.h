@@ -22,7 +22,7 @@ public:
 
     inline std::vector<std::unique_ptr<RobotHand> > getDetectedHands()
     {
-        return std::move(detectedRoboticHands_); // detectedRoboticHands_ are now nullptr.
+        return std::move(detectedRoboticHands_); // detectedRoboticHands_ is now nullptr.
     }
 
 private:

@@ -4,10 +4,7 @@
  *  Note: Not completed, but the idea should be clear.
  */
 #include <iostream>
-#include <ostream>
 #include <vector>
-#include <optional>
-#include <memory>
 
 #include "qroboticsrobothand.h"
 #include "serialportqroboticsrobothanddetector.h"
