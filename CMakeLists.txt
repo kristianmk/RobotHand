@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include(FetchContent)
 
 # Define the content to fetch (qbdevice-api-7.x.x)
+# Following https://cmake.org/cmake/help/latest/module/FetchContent.html
 FetchContent_Declare(
   qbrobotics-device
   GIT_REPOSITORY https://bitbucket.org/qbrobotics/qbdevice-api-7.x.x.git
