@@ -13,8 +13,27 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # This project was tested with qbdevice-api-7.x.x version 1a744b318d73f32553e578ff9b7ca240b2d45c07 (tag 1.1.13).
 add_subdirectory(../qbdevice-api-7.x.x qbrobotics-device)
 
+
+# List of source files
+set(SOURCES
+    main.cpp
+    qroboticsrobothand.cpp
+    serialportqroboticsrobothanddetector.cpp
+)
+
+# List of header files
+set(HEADERS
+    robothand.h
+    qroboticsrobothand.h
+    qroboticsrobothanddetector.h
+    serialportqroboticsrobothanddetector.h
+)
+
 # Add executable
-add_executable(RobotHandTest main.cpp)
+add_executable(RobotHandTest ${SOURCES})
+
+# Specify the headers for the target
+target_sources(RobotHandTest PRIVATE ${HEADERS})
 
 # Make sure handTest depends on qbrobotics_driver and Serial
 # Serial is not built automatically without this..
