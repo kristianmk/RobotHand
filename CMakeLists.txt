@@ -7,11 +7,18 @@ project(RobotHandTest VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Add qbdevice directory to build it as part of this project.
-# Clone qbdevice-api-7.x.x so it is located next to our project folder:
-# git clone --recurse-submodules https://bitbucket.org/qbrobotics/qbdevice-api-7.x.x.git
-# This project was tested with qbdevice-api-7.x.x version 1a744b318d73f32553e578ff9b7ca240b2d45c07 (tag 1.1.13).
-add_subdirectory(../qbdevice-api-7.x.x qbrobotics-device)
+# Include FetchContent module
+include(FetchContent)
+
+# Define the content to fetch (qbdevice-api-7.x.x)
+FetchContent_Declare(
+  qbrobotics-device
+  GIT_REPOSITORY https://bitbucket.org/qbrobotics/qbdevice-api-7.x.x.git
+  GIT_TAG 1a744b318d73f32553e578ff9b7ca240b2d45c07  # specify the commit hash or tag
+)
+
+# Fetch the content
+FetchContent_MakeAvailable(qbrobotics-device)
 
 
 # List of source files
