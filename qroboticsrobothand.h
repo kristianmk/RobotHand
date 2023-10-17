@@ -18,7 +18,9 @@
 class QRoboticsRobotHand : public RobotHand
 {
 public:
-    QRoboticsRobotHand(std::shared_ptr<qbrobotics_research_api::Communication> communicationHandler, serial::PortInfo& serialPortInfo, qbrobotics_research_api::Communication::ConnectedDeviceInfo& deviceInfo);
+    QRoboticsRobotHand( std::shared_ptr<qbrobotics_research_api::Communication> communicationHandler,
+                        serial::PortInfo& serialPortInfo,
+                        qbrobotics_research_api::Communication::ConnectedDeviceInfo& deviceInfo);
 
     virtual ~QRoboticsRobotHand();;
 
